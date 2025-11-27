@@ -15,7 +15,7 @@ import SearchScreen from './screens/SearchScreen';
 import NotificationScreen from './screens/NotificationScreen';
 import StoryViewScreen from './screens/StoryViewScreen';
 
-// ⭐ NEWLY ADDED — IMPORTANT
+// NEWLY ADDED — IMPORTANT
 import DistrictScreen from './screens/District';
 import ClubsScreen from './screens/Clubs';
 
@@ -26,10 +26,10 @@ const App = () => {
   const [screen, setScreen] = useState('Splash');
   const [storyImage, setStoryImage] = useState(null);
 
-  // ⭐ Screen params state
+  //  Screen params state
   const [params, setParams] = useState(null);
 
-  // ⭐ Custom Navigation Handler
+  // Custom Navigation Handler
   const navigate = (name, screenParams = null) => {
     setParams(screenParams);
     setScreen(name);
@@ -52,7 +52,7 @@ const App = () => {
     navigate('HomeFeed');
   };
 
-  // 🔥 ALL SCREENS HANDLED HERE
+  // ALL SCREENS HANDLED HERE
   const renderScreen = () => {
     switch (screen) {
       case 'Splash':
@@ -106,7 +106,7 @@ const App = () => {
           />
         );
 
-      // ⭐✔ NEWLY ADDED — NOW IT WORKS
+      // ✔ NEWLY ADDED — NOW IT WORKS
       case 'District':
         return (
           <DistrictScreen
@@ -116,7 +116,7 @@ const App = () => {
           />
         );
 
-      // ⭐ Optional for clubs
+      //  Optional for clubs
       case 'Clubs':
         return (
           <ClubsScreen
